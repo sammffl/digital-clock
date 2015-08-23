@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            font-size: 20px;vertical-align: middle;
+        }
+        img{
+            width: 16px;
+            height: auto;
+        }
+    </style>
+    <script>
+        window.onload= function () {
+            var aImg = document.getElementsByTagName('img');
+
+            function returnDouble(t){
+                if(t<10){
+                    return "0"+t;
+                }
+                return ''+t;
+            }
+
+            function clock(){
+                var time=new Date();
+                var str = time.getFullYear()+""+returnDouble(time.getMonth()+1)+returnDouble(time.getDate())+
+                        returnDouble(time.getHours())+returnDouble(time.getMinutes())+returnDouble(time.getSeconds())
+                console.log(str)
+                for (var i=0;i<aImg.length;i++){
+                    aImg[i].src = "images/"+ str.charAt(i) +".png";
+                }
+            }
+            setInterval(clock,1000);
+            clock();
+
+
+        }
+    </script>
+
+</head>
+<body>
+
+<img src="images/0.png" alt=""/>
+<img src="images/0.png" alt=""/>
+<img src="images/0.png" alt=""/>
+<img src="images/0.png" alt=""/>
+年
+<img src="images/0.png" alt=""/>
+<img src="images/0.png" alt=""/>
+月
+<img src="images/0.png" alt=""/>
+<img src="images/0.png" alt=""/>
+
+&nbsp;&nbsp;&nbsp;
+
+
+
+<img src="images/0.png" alt=""/>
+<img src="images/0.png" alt=""/>
+:
+<img src="images/0.png" alt=""/>
+<img src="images/0.png" alt=""/>
+:
+<img src="images/0.png" alt=""/>
+<img src="images/0.png" alt=""/>
+
+<br/>
+<h1></h1>
+</body>
+</html>
